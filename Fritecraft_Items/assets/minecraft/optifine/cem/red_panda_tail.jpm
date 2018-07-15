@@ -1,0 +1,24 @@
+{
+  "comment": "Designed by Sixfootblue with Cubik Studio - https://cubik.studio",
+  "createdWith": "Cubik Studio 2.8.438 Beta",
+  "texture": "textures/entity/pig/red_panda_parts",
+  "textureSize": [32,32],
+  "submodels": [
+    {
+      "id": "e0_Box1",
+      "translate": [-2,16.0,1],
+	  "rotate": [0.0,180,0],
+      "boxes": [
+        {
+          "coordinates": [-4.0,-16.0,0.0,4.0,16.0,4.0],
+          "uvDown": [24,12,28,16],
+          "uvUp": [20,12,24,16],
+          "uvNorth": [28,16,32,32],
+          "uvSouth": [20,16,24,32],
+          "uvWest": [16,16,20,32],
+          "uvEast": [24,16,28,32]
+        }
+      ]
+    }
+  ]
+}

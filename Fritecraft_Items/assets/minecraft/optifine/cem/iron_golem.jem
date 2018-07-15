@@ -1,0 +1,50 @@
+{
+  "comment": "Model by sixfootblue",
+  "models": 
+  [
+	{
+      "model": "end_golem_arm_left.jpm",
+      "part": "left_arm", 
+      "attach": true,
+      "translate": [13, 14, 0],
+      "rotate": [0, 180, 0]
+    },
+	{
+      "model": "end_golem_arm_right.jpm",
+      "part": "right_arm", 
+      "attach": true,
+      "translate": [-13, 14, 0],
+      "rotate": [0, 180, 0]
+    },
+	{
+      "model": "end_golem_head_left.jpm",
+      "part": "body", 
+      "attach": true,
+      "translate": [-4, -2, -1],
+      "rotate": [0, 180, 0],
+	  "animations":
+      [
+        {
+		  "this.rx": "-head.rx",
+		  "this.ry": "head.ry + 3.14159",
+		  "this.rz": "-head.rz"
+        }
+      ]
+    },
+	{
+      "model": "end_golem_head_right.jpm",
+      "part": "body", 
+      "attach": true,
+      "translate": [4, -2, -1],
+      "rotate": [0, 180, 0],
+	  "animations":
+      [
+        {
+		  "this.rx": "-head.rx",
+		  "this.ry": "head.ry + 3.14159",
+		  "this.rz": "-head.rz"
+        }
+      ]
+    }
+  ]
+}

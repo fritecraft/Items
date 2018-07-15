@@ -1,0 +1,22 @@
+{
+    "variants": {
+        "normal": [
+					{ "model": "books_01" },
+					{ "model": "books_01", "y": 90 },
+					{ "model": "books_01", "y": 180 },
+					{ "model": "books_01", "y": 270 },
+					{ "model": "books_02" },
+					{ "model": "books_02", "y": 90 },
+					{ "model": "books_02", "y": 180 },
+					{ "model": "books_02", "y": 270 },
+					{ "model": "books_03" },
+					{ "model": "books_03", "y": 90 },
+					{ "model": "books_03", "y": 180 },
+					{ "model": "books_03", "y": 270 },
+					{ "model": "books_04" },
+					{ "model": "books_04", "y": 90 },
+					{ "model": "books_04", "y": 180 },
+					{ "model": "books_04", "y": 270 }
+]
+    }
+}

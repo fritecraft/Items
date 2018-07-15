@@ -1,0 +1,53 @@
+{
+  "comment": "Designed by Sixfootblue with Cubik Studio - https://cubik.studio",
+  "createdWith": "Cubik Studio 2.8.438 Beta",
+  "texture": "textures/entity/rabbit/frog_head",
+  "textureSize": [32,32],
+  "submodels": [
+    {
+      "id": "e0_Box1",
+      "translate": [3.0,0.0,0.0],
+      "boxes": [
+        {
+          "coordinates": [-6.0,-3.0,0.0,6.0,3.0,5.0],
+          "uvDown": [11,0,17,5],
+          "uvUp": [5,0,11,5],
+          "uvNorth": [16,7,22,10],
+          "uvSouth": [5,7,11,10],
+          "uvWest": [0,7,5,10],
+          "uvEast": [11,7,16,10]
+        }
+      ]
+    },
+    {
+      "id": "e1_Box2",
+      "translate": [-1.0,-3.0,1.0],
+      "boxes": [
+        {
+          "coordinates": [-2.0,-1.0,0.0,2.0,1.0,2.0],
+          "uvDown": [15,1,17,3],
+          "uvUp": [9,1,11,3],
+          "uvNorth": [16,6,18,7],
+          "uvSouth": [9,6,11,7],
+          "uvWest": [13,5,15,6],
+          "uvEast": [13,6,15,7]
+        }
+      ]
+    },
+    {
+      "id": "e2_Box2",
+      "translate": [3.0,-3.0,1.0],
+      "boxes": [
+        {
+          "coordinates": [-2.0,-1.0,0.0,2.0,1.0,2.0],
+          "uvDown": [11,1,13,3],
+          "uvUp": [5,1,7,3],
+          "uvNorth": [20,6,22,7],
+          "uvSouth": [5,6,7,7],
+          "uvWest": [1,6,3,7],
+          "uvEast": [1,5,3,6]
+        }
+      ]
+    }
+  ]
+}

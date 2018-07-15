@@ -1,0 +1,11 @@
+{
+    "parent": "item/handheld2",
+    "textures": {
+        "layer0": "items/iron_axe"
+    },
+	"overrides": [
+		{ "predicate": { "damaged": 1, "damage": 0.25 }, "model": "item/iron_axe/1" },
+		{ "predicate": { "damaged": 1, "damage": 0.50 }, "model": "item/iron_axe/2" },
+		{ "predicate": { "damaged": 1, "damage": 0.75 }, "model": "item/iron_axe/3" }
+	]
+}

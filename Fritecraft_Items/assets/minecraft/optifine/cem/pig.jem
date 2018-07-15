@@ -1,0 +1,27 @@
+{
+  "comment": "Model by sixfootblue",
+  "textureSize": [64,64],
+  "models": 
+  [
+	{
+      "model": "red_panda_ears.jpm",
+      "part": "head", 
+      "attach": true,
+      "translate": [-0.25, 8, -4],
+      "rotate": [0, 180, 0]
+    },
+	{
+      "model": "red_panda_tail.jpm",
+      "part": "body", 
+      "attach": true,
+      "translate": [0, 6, 0],
+      "rotate": [0, 0, 0],
+	  "animations":
+      [
+        {
+		  "this.rx": "-0.2 + (sin(time / 18) / 8)"
+        }
+      ]
+    }
+  ]
+}

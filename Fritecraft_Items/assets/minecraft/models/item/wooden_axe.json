@@ -1,0 +1,11 @@
+{
+	"parent": "item/handheld2",
+	"textures": {
+		"layer0": "items/wooden_axe/0"
+	},
+	"overrides": [
+		{ "predicate": { "damaged": 1, "damage": 0.25 }, "model": "item/wooden_axe/1" },
+		{ "predicate": { "damaged": 1, "damage": 0.50 }, "model": "item/wooden_axe/2" },
+		{ "predicate": { "damaged": 1, "damage": 0.75 }, "model": "item/wooden_axe/3" }
+	]
+}

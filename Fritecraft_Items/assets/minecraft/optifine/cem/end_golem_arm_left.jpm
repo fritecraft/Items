@@ -1,0 +1,38 @@
+{
+  "comment": "Designed by Sixfootblue with Cubik Studio - https://cubik.studio",
+  "createdWith": "Cubik Studio 2.8.438 Beta",
+  "texture": "textures/entity/golem/end_golem_parts",
+  "textureSize": [64,64],
+  "submodels": [
+    {
+      "id": "e0_Box1",
+      "translate": [4.0,14.0,-4.0],
+      "boxes": [
+        {
+          "coordinates": [-8.0,-30.0,0.0,8.0,30.0,8.0],
+          "uvDown": [16,26,24,34],
+          "uvUp": [8,26,16,34],
+          "uvNorth": [24,34,32,64],
+          "uvSouth": [8,34,16,64],
+          "uvWest": [0,34,8,64],
+          "uvEast": [16,34,24,64]
+        }
+      ]
+    },
+    {
+      "id": "e1_Box2",
+      "translate": [2.0,-16.0,-2.0],
+      "boxes": [
+        {
+          "coordinates": [-4.0,-4.0,0.0,4.0,4.0,4.0],
+          "uvDown": [48,6,52,10],
+          "uvUp": [44,6,48,10],
+          "uvNorth": [52,10,56,14],
+          "uvSouth": [44,10,48,14],
+          "uvWest": [40,10,44,14],
+          "uvEast": [47,10,52,14]
+        }
+      ]
+    }
+  ]
+}
