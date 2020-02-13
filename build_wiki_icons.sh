@@ -15,3 +15,10 @@ find ./Fritecraft_Items/assets/minecraft/optifine/cit/consommable/potions -type 
 
 
 find ./_wiki/ -type f -name "*.png" -exec convert -verbose \{} -scale 64x64 \{} \;
+
+
+find ../Wiki/docs/pack/ -type f -name "*.png" -exec rm {} \;
+cp -vR ./_wiki/* ../Wiki/docs/pack/
+
+cd /root/Items/ && git add . && git commit -a -m "build commit `date`" && git push
+cd /root/Wiki  && git add . && git commit -a -m "build commit `date`" && git push
