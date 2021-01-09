@@ -1,0 +1,22 @@
+{
+    "variants": {
+        "normal": [
+					{ "model": "food_plate_01" },
+					{ "model": "food_plate_01", "y": 90 },
+					{ "model": "food_plate_01", "y": 180 },
+					{ "model": "food_plate_01", "y": 270 },
+					{ "model": "food_plate_02" },
+					{ "model": "food_plate_02", "y": 90 },
+					{ "model": "food_plate_02", "y": 180 },
+					{ "model": "food_plate_02", "y": 270 },
+					{ "model": "food_plate_03" },
+					{ "model": "food_plate_03", "y": 90 },
+					{ "model": "food_plate_03", "y": 180 },
+					{ "model": "food_plate_03", "y": 270 },
+					{ "model": "food_plate_04" },
+					{ "model": "food_plate_04", "y": 90 },
+					{ "model": "food_plate_04", "y": 180 },
+					{ "model": "food_plate_04", "y": 270 }
+]
+    }
+}
