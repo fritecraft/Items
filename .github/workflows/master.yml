@@ -17,8 +17,8 @@ jobs:
        tag_name: ${{ github.ref }}
        release_name: Release ${{ github.ref }}
        body: Auto generated release
-       draft: true
-       prerelease: false
+       # draft: true
+       # prerelease: false
    - name: Create Zip
      uses: papeloto/action-zip@v1
      with:
