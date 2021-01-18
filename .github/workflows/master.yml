@@ -1,17 +1,84 @@
-name: Zip Files
+name: Build and release
 on:
-  push:
-    branches:
-      - master
+ push:
+   tags:
+     - 'v*'
 jobs:
-  zip-files:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: papeloto/action-zip@v1
-        with:
-          files: assets/ pack.png pack.mcmeta 
-          dest: items.zip
+ build:
+   runs-on: ubuntu-latest
+   steps:
+   - uses: actions/checkout@v1
+   - name: Create Release
+     id: create_release
+     uses: actions/create-release@v1
+     env:
+       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+     with:
+       tag_name: ${{ github.ref }}
+       release_name: Release ${{ github.ref }}
+       body: Auto generated release
+       draft: true
+       prerelease: false
+   - name: Create Zip
+     uses: papeloto/action-zip@v1
+     with:
+       files: assets/ pack.png pack.mcmeta 
+       dest: items.zip    
+   - name: Upload Assets to Release with a wildcard
+     uses: csexton/release-asset-action@v2
+     with:
+       pattern: "build/*"
+       github-token: ${{ secrets.GITHUB_TOKEN }}
+       release-url: ${{ steps.create_release.outputs.upload_url }}
+
+
+
+
+# on:
+  # push:
+    # # Sequence of patterns matched against refs/tags
+    # tags:
+      # - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
+
+# name: Create Release
+
+# jobs:
+  # build:
+    # name: Create Release
+    # runs-on: ubuntu-latest
+    # steps:
+      # - name: Checkout code
+        # uses: actions/checkout@v2
+      # - name: Create Release
+        # id: create_release
+        # uses: actions/create-release@v1
+        # env:
+          # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        # with:
+          # tag_name: ${{ github.ref }}
+          # release_name: Release ${{ github.ref }}
+          # body: |
+            # Changes in this Release
+            # - First Change
+            # - Second Change
+          # draft: false
+          # prerelease: false
+
+
+# name: Zip Files
+# on:
+  # push:
+    # branches:
+      # - master
+# jobs:
+  # zip-files:
+    # runs-on: ubuntu-latest
+    # steps:
+      # - uses: actions/checkout@v2
+      # - uses: papeloto/action-zip@v1
+        # with:
+          # files: assets/ pack.png pack.mcmeta 
+          # dest: items.zip
 
 
 # name: Create Zip
