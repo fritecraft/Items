@@ -1,20 +1,47 @@
-name: Create Zip
+name: Zip Files
 on:
   push:
     branches:
       - master
 jobs:
-  build:
+  zip-files:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: Zip Folder
-      run: zip -r items.zip assets/ pack.png pack.mcmeta 
-    - name: Release to Github
-      run: echo "Release"
-    - name: Upload Release
-      uses: ncipollo/release-action@v1
-      with:
-        artifacts: "items.zip"
-        token: ${{ secrets.GITHUB_TOKEN }} 
-       
+      - uses: actions/checkout@v2
+      - uses: papeloto/action-zip@v1
+        with:
+          files: assets/ pack.png pack.mcmeta 
+          dest: items.zip
+
+
+# name: Create Zip
+# on:
+  # push:
+    # branches:
+      # - master
+# jobs:
+  # build:
+    # runs-on: ubuntu-latest
+    # steps:
+    # - uses: actions/checkout@v1
+    # - name: Zip Folder
+      # run: zip -r items.zip assets/ pack.png pack.mcmeta 
+    # - name: Release to Github
+      # run: echo "Release"
+    # - name: Upload Release
+      # uses: ncipollo/release-action@v1
+      # with:
+        # artifacts: "items.zip"
+        # token: ${{ secrets.GITHUB_TOKEN }} 
+
+# jobs:
+
+  # build:
+    # runs-on: ubuntu-latest
+    # steps:
+    # - uses: actions/checkout@v1
+    # - uses: ncipollo/release-action@v1
+      # with:
+        # artifacts: "release.tar.gz,foo/*.txt"
+        # bodyFile: "body.md"
+        # token: ${{ secrets.GITHUB_TOKEN }}
