@@ -19,15 +19,17 @@ jobs:
        body: Auto generated release
        # draft: true
        # prerelease: false
-   - name: Create Zip
-     uses: papeloto/action-zip@v1
-     with:
-       files: assets/ pack.png pack.mcmeta 
-       dest: items.zip    
+   - name: Zip Folder
+      run: zip -r items.zip assets/ pack.png pack.mcmeta     
+   # - name: Create Zip
+     # uses: papeloto/action-zip@v1
+     # with:
+       # files: assets/ pack.png pack.mcmeta 
+       # dest: items.zip    
    - name: Upload Assets to Release with a wildcard
      uses: csexton/release-asset-action@v2
      with:
-       pattern: "build/*"
+       pattern: "items.zip"
        github-token: ${{ secrets.GITHUB_TOKEN }}
        release-url: ${{ steps.create_release.outputs.upload_url }}
 
