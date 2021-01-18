@@ -20,7 +20,7 @@ jobs:
        # draft: true
        # prerelease: false
    - name: Zip Folder
-      run: zip -r items.zip assets/ pack.png pack.mcmeta     
+     run: zip -r items.zip assets/ pack.png pack.mcmeta     
    # - name: Create Zip
      # uses: papeloto/action-zip@v1
      # with:
