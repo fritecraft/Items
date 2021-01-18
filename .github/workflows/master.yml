@@ -1,4 +1,4 @@
-name: MasterDeployCI
+name: Create Zip
 on:
   push:
     branches:
@@ -12,3 +12,9 @@ jobs:
       run: zip -r items.zip assets/ pack.png pack.mcmeta 
     - name: Release to Github
       run: echo "Release"
+    - name: Upload Release
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: "items.zip"
+        token: ${{ secrets.GITHUB_TOKEN }} 
+       
