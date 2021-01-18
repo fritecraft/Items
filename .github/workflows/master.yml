@@ -7,13 +7,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v1
     - name: Zip Folder
       run: zip -r items.zip assets/ pack.png pack.mcmeta 
     - name: Release to Github
       run: echo "Release"
     - name: Upload Release
-      uses: ncipollo/release-action@master
+      uses: ncipollo/release-action@v1
       with:
         artifacts: "items.zip"
         token: ${{ secrets.GITHUB_TOKEN }} 
